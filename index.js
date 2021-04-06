@@ -16,6 +16,10 @@ const { ObjectID } = require('mongodb');
 app.use(cors());
 app.use(bodyParser.json());
 
+  app.get('/' , (req,res)=>{
+    res.send( 'Bismillah Hir Rahman Nir Rahim')
+  })
+
 // collectionArea
 client.connect(err => {
   const ProductsCollection = client.db(`${process.env.DB_NAME}`).collection(`${process.env.DB_COLLECTION}`);
